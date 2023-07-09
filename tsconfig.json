@@ -5,13 +5,7 @@
       "path": "core"
     },
     {
-      "path": "java/1.15"
-    },
-    {
-      "path": "java/1.16"
-    },
-    {
-      "path": "java/1.17"
+      "path": "java/1.19"
     }
   ]
 }

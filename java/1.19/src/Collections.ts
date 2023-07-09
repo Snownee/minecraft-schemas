@@ -1,6 +1,60 @@
 import { CollectionRegistry } from '@mcschema/core'
 
 export function initCollections(collections: CollectionRegistry) {
+  collections.register('lychee_recipe_serializer', [
+    'lychee:block_interacting',
+    'lychee:block_clicking',
+    'lychee:item_burning',
+    'lychee:item_inside',
+    'lychee:anvil_crafting',
+    'lychee:block_crushing',
+    'lychee:lightning_channeling',
+    'lychee:item_exploding',
+    'lychee:block_exploding',
+    'lychee:random_block_ticking',
+    'lychee:dripstone_dripping',
+    'lychee:crafting',
+  ])
+
+  collections.register('contextual_condition_type', [
+    'chance',
+    'not',
+    'or',
+    'and',
+    'location',
+    'weather',
+    'difficulty',
+    'time',
+    'execute',
+    'fall_distance',
+    'entity_health',
+    'direction',
+    'is_sneaking',
+    'check_param',
+  ])
+
+  collections.register('post_action_type', [
+    'random',
+    'drop_item',
+    'place',
+    'execute',
+    'drop_xp',
+    'if',
+    'explode',
+    'hurt',
+    'anvil_damage_chance',
+    'add_item_cooldown',
+    'move_towards_face',
+    'delay',
+    'break',
+    'cycle_state_property',
+    'prevent_default',
+    'damage_item',
+    'set_item',
+    // 'nbt_patch',
+    'loquat:spawn'
+  ])
+
   collections.register('advancement_trigger', [
     'minecraft:allay_drop_item_on_block',
     'minecraft:avoid_vibration',

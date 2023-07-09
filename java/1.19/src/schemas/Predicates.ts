@@ -92,6 +92,7 @@ export function initPredicatesSchemas(schemas: SchemaRegistry, collections: Coll
       z: Reference('float_bounds')
     })),
     biome: Opt(StringNode({ validator: 'resource', params: { pool: '$worldgen/biome' } })),
+    'lychee:biome_tag': Opt(StringNode({ validator: 'resource', params: { pool: '$tag/worldgen/biome' } })),
     structure: Opt(StringNode({ validator: 'resource', params: { pool: '$worldgen/structure' } })),
     dimension: Opt(StringNode({ validator: 'resource', params: { pool: '$dimension' } })),
     light: Opt(ObjectNode({

@@ -15,6 +15,11 @@ import { initTagsSchemas } from './Tags'
 import { initTextComponentSchemas } from './TextComponent'
 import { initWorldgenSchemas } from './worldgen'
 import { initWorldSettingsSchemas } from './WorldSettings'
+import {initLycheeCommonSchemas} from "./LycheeCommon";
+import {initContextualConditionsSchemas} from "./ContextualCondition";
+import {initLycheeRecipeSchemas} from "./LycheeRecipe";
+import {initPostActionsSchemas} from "./PostAction";
+import {initLoquatSchemas} from "./Loquat";
 
 export function initSchemas(schemas: SchemaRegistry, collections: CollectionRegistry) {
     // `Common.ts` is the only file that has exports. It should be initialized first. 
@@ -34,4 +39,10 @@ export function initSchemas(schemas: SchemaRegistry, collections: CollectionRegi
     initTextComponentSchemas(schemas, collections)
     initWorldgenSchemas(schemas, collections)
     initWorldSettingsSchemas(schemas, collections)
+
+    initLycheeCommonSchemas(schemas, collections)
+    initContextualConditionsSchemas(schemas, collections)
+    initPostActionsSchemas(schemas, collections)
+    initLycheeRecipeSchemas(schemas, collections)
+    initLoquatSchemas(schemas, collections)
 }

@@ -18,7 +18,7 @@ type BlockStateKeyValidationOption = {
   validator: 'block_state_key',
   params: {
     /**
-     * A relative path from the node with this validator to 
+     * A relative path from the node with this validator to
      * the string node containing a block ID.
      */
     id: RelativePath
@@ -29,7 +29,7 @@ type BlockStateMapValidationOption = {
   validator: 'block_state_map',
   params: {
     /**
-     * A relative path from the node with this validator to 
+     * A relative path from the node with this validator to
      * the string node containing a block ID.
      */
     id: RelativePath
@@ -45,8 +45,8 @@ type CommandValidationOption = {
      */
     leadingSlash?: boolean,
     /**
-     * Whether unfinished commands are valid. 
-     * 
+     * Whether unfinished commands are valid.
+     *
      * No errors will show when the command doesn't begin with a slash
      * but both `leadingSlash` and `allowPartial` are set to `true`.
      */
@@ -76,8 +76,8 @@ type EntityValidationOption = {
 type NbtdocCategory = 'minecraft:block' | 'minecraft:entity' | 'minecraft:item'
 
 /**
- * Get the nbtdoc category from a loot copy source. 
- * 
+ * Get the nbtdoc category from a loot copy source.
+ *
  * The category for `this`, `killer`, and `killer_player` should be `minecraft:entity`, while
  * the category for `block_entity` should be `minecraft:block`
  */
@@ -106,14 +106,14 @@ type NbtValidationOption = {
        */
       category: NbtdocCategory,
       /**
-       * A relative path from the node with this validator to 
+       * A relative path from the node with this validator to
        * the string node containing a block/entity/item ID.
        */
       id?: RelativePath,
     }
-    /** 
-     * If this NBT is a predicate. If set to `true`, types are 
-     * checked strictly, e.g. cannot use integers in places which 
+    /**
+     * If this NBT is a predicate. If set to `true`, types are
+     * checked strictly, e.g. cannot use integers in places which
      * require shorts.
      */
     isPredicate?: boolean
@@ -143,8 +143,8 @@ type ResourceValidationOption = {
   validator: 'resource',
   params: {
     /**
-     * The possible values of this resource location. 
-     * 
+     * The possible values of this resource location.
+     *
      * If the type is `string[]`, all values in the array must be prefixed with `minecraft:`.
      */
     pool: ResourceType | string[],
@@ -152,7 +152,7 @@ type ResourceValidationOption = {
      * Whether tag resource locations (starting with a hash symbol (`#`)) are allowed. The client
      * implementation is encouraged to use the values for the corresponding tag type to validate
      * these tag resource locations.
-     * 
+     *
      * | Pool type               | Tag type           |
      * | ----------------------- | ------------------ |
      * | `$function`             | `$tag/function`    |
